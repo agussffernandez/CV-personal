@@ -1,0 +1,283 @@
+/* ==================
+    CONFIGURACIÓN GENERAL DE LA PÁGINA
+===================*/
+
+.cv-pagina {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    gap: 10px; /* Espacio entre los hijos de main (aside y sección principal) */
+    width: 100%;
+    max-width: 1100px;
+    border: 1px solid hsl(209 98% 60%);
+}
+
+:root {
+    --color-base: #012e58;
+}
+
+/*
+main * {
+    border: 1px solid black;
+}
+*/
+
+/* ==================
+    ASIDE PRINCIPAL
+===================*/
+
+.aside-main {
+    background-color: var(--color-base);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 30%;
+    padding: 20px 30px;
+}
+
+.card-aside{
+    background: transparent;
+    padding: 10px;
+}
+
+.titulo-aside {
+    display: inline-block;
+    text-transform: uppercase; /* Pone todo en mayus */
+    font-weight: 500; /* controla el grosor del texto, es decir, qué tan “bold” o “fino” se ve. (300 → ligero, 500 → medio, 900 → ultra negrita)*/
+    padding-bottom: 1px;
+    border-bottom: 1px solid white;
+}
+
+/* -------------------
+    SECCIÓN DE IMAGEN DEL ASIDE
+-------------------*/
+
+.img-aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.avatar { /* Esto me sirve para ajustar la imagen como un cuadrado y que quede en el aside */
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    border: 2px solid white;
+    object-fit: cover; /* la imagen se escala hasta llenar el contenedor y se recortan partes que sobresalgan (arriba/abajo o lados). */
+    object-position: top; /* Alinea la imagen hacia arriba */
+}
+
+/* -------------------
+    LISTAS DEL ASIDE
+-------------------*/
+
+.lista-aside {
+    margin: -10px 0; /* Reduce el espacio alrededor de la lista para alinearla mejor dentro del aside  */
+}
+
+.lista-nodecoration {
+    list-style: none;
+    padding-left: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+.li-contenedor-item span, /* span y a son inline, por lo que se ajustan en el contenedor flex */
+.li-contenedor-item a {
+    overflow-wrap: anywhere;
+    /* word-break: break-word; /* word-break -> rompe palabra
+                            word-break: normal;	Comportamiento normal: corta solo en espacios o guiones.
+                            word-break: break-word;	Permite cortar palabras largas sin espacios.
+                            overflow-wrap: anywhere;	También permite cortar palabras largas, con un enfoque más “flexible” que break-word. (ES MÁS MODERNO) */
+}
+
+li a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: rgb(213, 254, 254);
+}
+
+/* -------------------
+    ICONOS
+-------------------*/
+
+.li-contenedor-item {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* más espacio entre icono y texto */
+}
+
+
+.icono-mail {
+    width: 1.2em;
+    height: 1.2em;
+    flex-shrink: 0;   /* evita que se reduzca la imagen svg (shrink:encoger). 
+                        flex-shrink: 1 se encoge proporcionalmente (este es el por defecto). 
+                        flex-shrink: 0 no se encoge, se mantiene de su tamaño original.*/
+}
+
+.icono-phone {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.icono-ubi {
+    width: 1.2em;
+    height: 1.2em;
+    flex-shrink: 0;
+}
+
+.icono-linkedin {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+/*
+COMENTARIO:
+
+flex-shrink: 0 se pone solo cuando el texto o los elementos vecinos pueden hacer que el icono se comprima demasiado.(ej: el mail)
+
+Si el espacio disponible siempre es suficiente para el icono, no hace falta.
+*/
+
+
+/* ==================
+    SECCIÓN PRINCIPAL
+===================*/
+
+.section-main {
+    flex: 1; /* Ocupa todo el porcentaje que le queda*/
+    margin: 40px 20px; /*agrega espacio alrededor para que el contenido no quede pegado a los bordes*/
+}
+
+/* -------------------
+    HEADER DE LA SECCIÓN PRINCIPAL
+-------------------*/
+
+.header-titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(230, 229, 229);
+}
+
+.header-titulo h1 {
+    margin-bottom: 12px;
+}
+
+.header-titulo p {
+    color: rgb(90, 90, 90);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: .8px; /*separa un porquito más las letras*/
+    margin-top: 12px;
+}
+
+/* -------------------
+    TITULOS DE SECCIÓN
+-------------------*/
+
+h3.titulo {
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+    color: var(--color-base);
+    border-bottom: 1px solid var(--color-base);
+}
+
+/* ==================
+    EXPERIENCIA
+===================*/
+
+.encabezado-xp {
+    display: flex;
+    justify-content: space-between; /* separa en el medio a los elementos con todo el espacio que pueda*/
+    align-items: baseline; /* alinea el rol con la fecha */
+    margin-bottom: 5px;
+}
+
+.rol-empresa-xp {
+    margin-bottom: 0px;
+}
+
+.rol-xp {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 0px;
+    margin-top: 13px;
+}
+
+.empresa-xp {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0px;
+}
+
+.fecha-xp {
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--color-base);
+    margin-bottom: 15px;
+}
+
+.texto-summary {
+    margin: 12px 0px;
+}
+
+.last-paragraph {
+    margin-bottom: 0px;
+}
+
+.funciones-xp {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* ==================
+    PROYECTOS
+===================*/
+
+.titulo-proyecto {
+    font-weight: bold;
+}
+
+.link-github {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.link-github:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.link-github:hover {
+    color: #3d678f;
+}
+
+.p-link-proyecto {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.p-link-proyecto svg {
+    width: 1.2em;
+    height: 1.2em;
+    flex-shrink: 0;
+}
