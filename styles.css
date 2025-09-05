@@ -10,6 +10,7 @@
 main {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
+    flex-wrap: wrap; /* <- esto permite que aside y section-main bajen de línea si no entran */
     gap: 10px; /* Espacio entre los hijos de main (aside y sección principal) */
     width: 100%;
     max-width: 1100px;
@@ -280,4 +281,17 @@ h3.titulo {
     width: 1.2em;
     height: 1.2em;
     flex-shrink: 0;
+}
+
+/* ==================
+    MEDIA QUERYS
+===================*/
+
+@media (max-width: 679px) {
+    .aside-main {
+        width: 100%;
+    }
+    .section-main {
+        width: 100%;
+    }
 }
