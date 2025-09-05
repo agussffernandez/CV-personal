@@ -11,6 +11,7 @@ main {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-wrap: wrap; /* <- esto permite que aside y section-main bajen de línea si no entran */
+                     /* permite que los hijos bajen a la siguiente línea si no caben en una fila */
     gap: 10px; /* Espacio entre los hijos de main (aside y sección principal) */
     width: 100%;
     max-width: 1100px;
