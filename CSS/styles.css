@@ -288,7 +288,7 @@ h3.titulo {
     MEDIA QUERYS
 ===================*/
 
-@media (max-width: 681px) {
+@media (max-width: 690px) {
     .aside-main {
         width: 100%;
     }
