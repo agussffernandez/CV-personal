@@ -310,7 +310,7 @@ Esto convierte el layout de dos columnas en una sola columna apilada.
 /* 
     MEDIA QUERY 417px
 -----------------------------------------
-Cuando el ancho de pantalla es 417px o menor (ej. celulares pequeños):
+Cuando el ancho de pantalla es 417px o menor el nombre queda pegado a la izq entonces (ej. celulares pequeños):
 - El contenedor .header-titulo centra todo su texto.
 Soluciona que el <h1> (y los demás textos del header) no se desplacen hacia la izquierda 
 cuando la pantalla es muy chica, manteniéndolos centrados.
