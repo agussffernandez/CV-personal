@@ -94,7 +94,8 @@ li a {
 }
 
 .li-contenedor-item span, /* span y a son inline, por lo que se ajustan en el contenedor flex */
-.li-contenedor-item a {
+.li-contenedor-item a,
+.link-github {
     overflow-wrap: anywhere;
     /* word-break: break-word; /* word-break -> rompe palabra
                             word-break: normal;	Comportamiento normal: corta solo en espacios o guiones.
@@ -288,11 +289,34 @@ h3.titulo {
     MEDIA QUERYS
 ===================*/
 
+/* 
+    MEDIA QUERY 690px
+-----------------------------------------
+Cuando el ancho de pantalla es 690px o menor (ej. tablets en vertical y celulares grandes):
+- El <aside> pasa a ocupar el 100% del ancho → se coloca arriba.
+- La <section-main> también ocupa el 100% → se coloca abajo.
+Esto convierte el layout de dos columnas en una sola columna apilada.
+*/
 @media (max-width: 690px) {
     .aside-main {
         width: 100%;
     }
     .section-main {
         width: 100%;
+    }
+}
+
+
+/* 
+    MEDIA QUERY 417px
+-----------------------------------------
+Cuando el ancho de pantalla es 417px o menor (ej. celulares pequeños):
+- El contenedor .header-titulo centra todo su texto.
+Soluciona que el <h1> (y los demás textos del header) no se desplacen hacia la izquierda 
+cuando la pantalla es muy chica, manteniéndolos centrados.
+*/
+@media (max-width: 417px) {
+    .header-titulo {
+        text-align: center;
     }
 }
